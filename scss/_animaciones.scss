@@ -1,0 +1,109 @@
+// Llaves
+
+.entrar {
+    animation-duration: 1s;
+    animation-name: scale-in-center;
+    animation-iteration-count: 1;
+}
+
+.izq {
+    animation-duration: 1s;
+    animation-name: swing-in-left-bck;
+    animation-iteration-count: 1;
+}
+
+.entrarTexto {
+    animation-duration: 1s;
+    animation-name: tracking-in-expand;
+    animation-iteration-count: 1;
+}
+
+.entM {
+    animation-duration: 1s;
+    animation-name: scale-up-center;
+    animation-iteration-count: 1;
+}
+
+.entrarP {
+    animation-duration: 1s;
+    animation-name: text-focus-in;
+    animation-iteration-count: 1;
+}
+
+
+
+//Keyframes
+
+@keyframes scale-in-center {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+@keyframes swing-in-left-bck {
+    0% {
+        -webkit-transform: rotateY(-70deg);
+        transform: rotateY(-70deg);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+        opacity: 0
+    }
+
+    100% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+        opacity: 1
+    }
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -.5em;
+        opacity: 0
+    }
+
+    40% {
+        opacity: .6
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(.5);
+        transform: scale(.5)
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0
+    }
+
+    100% {
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1
+    }
+}
+

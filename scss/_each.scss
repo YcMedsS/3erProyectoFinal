@@ -1,0 +1,31 @@
+//mapa 
+$redes:(
+    twitter: cyan,
+    facebook: royalblue,
+    instagram: orange    
+);
+//lista con mapa
+@each $clave, $valor in $redes {
+    .boton-#{$clave} {
+        background-color: $valor;
+        border: $valor;
+        padding-top: 10px;
+    }
+}
+//mapa para map get
+$coloresRedes:(
+    fuenteTwitter: cyan,
+    fuenteFacebook:royalblue,
+    fuenteInstagram:orangered
+);
+#tweet{
+    color: map-get($coloresRedes, fuenteTwitter)
+}
+#faceb{
+    color: map-get($coloresRedes, fuenteFacebook)
+   
+}
+#insta{
+    color: map-get($coloresRedes, fuenteInstagram)
+}
+

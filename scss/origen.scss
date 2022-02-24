@@ -1,0 +1,89 @@
+$texto: black;
+$relleno: #61FF33;
+$borde: #28a749;
+
+
+
+/* Menú */
+a{
+    text-decoration: none;
+}
+
+.texto{
+    color: $texto;
+}
+#redes{
+    text-align: center;
+}
+.nav-link2 {
+    color: $texto;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition-duration: 1s;
+}
+
+.nav-link2:hover {
+    text-decoration: none;
+    color: $borde;
+}
+
+.navbar-toggler-icon2 {
+
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+    background-image: url("Fotos/menuD.png");
+}
+
+/*extend*/
+.btn-outline-success2 {
+    color: $borde;
+    background-color: transparent;
+    background-image: none;
+    border-color: $borde;
+}
+
+.btn-outline-success2:hover {
+    @extend .btn-outline-success2;
+    color: #000;
+    background-color: $relleno;
+}
+/* fin extend*/
+/* mixin */
+@mixin imagenSize($anchura, $altura) {
+    width: $anchura;
+    height: $altura;
+}
+ 
+.logoMenu {
+    @include imagenSize (80px, 80px)
+}
+/* Fin Mixins */
+.btn-outline-success2:focus,
+.btn-outline-success2.focus {
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+.btn-outline-success2.disabled,
+.btn-outline-success2:disabled {
+    color: $borde;
+    background-color: transparent;
+}
+
+/* Cierre de Menú */
+.gris{
+    background-color:lightgray;
+    text-align: center;
+}
+#mapa{
+    margin: 5%;
+}
+
+// Imports
+@import "animaciones.scss";
+@import "each.scss";
